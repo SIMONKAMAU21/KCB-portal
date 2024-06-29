@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import Roles from "./pages/Settings/SettingPages/Roles";
+
 
 const StepOne = lazy(() => import("./pages/steps/StepOne"));
 const StepTwo = lazy(() => import("./pages/steps/StepTwo"));
@@ -24,6 +24,8 @@ const Generalinfo = lazy(() =>
   import("./pages/Settings/SettingPages/Generalinfo")
 );
 
+const CreateRole= lazy(()=> import ("./pages/Settings/CreateRole"));
+const Roles= lazy(()=> import ("./pages/Settings/SettingPages/Roles"))
 const router = createBrowserRouter([
   { path: "/", element: <StepOne /> },
   { path: "/step2", element: <StepTwo /> },
@@ -40,6 +42,7 @@ const router = createBrowserRouter([
   { path: "/settings", element: <Setting /> },
   { path: "/info", element: <Generalinfo/> },
   { path: "/roles", element: <Roles/>},
+  { path: "/Createrole", element: <CreateRole/>},
 ]);
 
 function App() {

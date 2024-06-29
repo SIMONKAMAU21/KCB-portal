@@ -14,6 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { EditIcon } from "@chakra-ui/icons";
 import Setting from "../Setting";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Roles = () => {
   const [roles, setRoles] = useState([
@@ -55,6 +57,10 @@ const Roles = () => {
     },
   ]);
 
+const navigate = useNavigate()
+const handleCreateRole= () =>{
+  navigate('/Createrole')
+}
   const toggleStatus = (index) => {
     setRoles((prevRoles) =>
       prevRoles.map((role, i) =>
@@ -74,7 +80,7 @@ const Roles = () => {
         <Heading as="h5" size="sm">
           Roles
         </Heading>
-        <Button mt="40px" bg="#003A49" color="white" w="15%">
+        <Button mt="40px" bg="#003A49" color="white" w="15%" onClick={handleCreateRole}>
           Create Role
         </Button>
         <Table variant="simple" mt="20px">
