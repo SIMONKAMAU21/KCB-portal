@@ -4,7 +4,6 @@ import Loginform from './Loginform';
 import AuthWrapper from '../../components/AuthPageWrapper';
 
 const Login = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <AuthWrapper

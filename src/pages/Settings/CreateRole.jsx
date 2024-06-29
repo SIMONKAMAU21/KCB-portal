@@ -28,11 +28,11 @@ const CreateRole = () => {
           </Text>
           <VStack spacing={4} align="start" mt={5}>
             <FormControl>
-              <FormLabel>Name</FormLabel>
+              <FormLabel fontSize={"sm"}>Name</FormLabel>
               <Input w={"60%"} placeholder="Name" />
             </FormControl>
            <FormControl flex={16}>
-              <FormLabel>Status</FormLabel>
+              <FormLabel fontSize={"sm"}>Status</FormLabel>
               <Select w={"60%"} placeholder="Select status">
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
