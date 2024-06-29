@@ -1,0 +1,5 @@
+[
+   { "name": "Bills", "amount": 40 },
+   { "name": "Deposit", "amount": 20 },
+   { "name": "Float", "amount": 30 }
+ ]

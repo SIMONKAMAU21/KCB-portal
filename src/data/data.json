@@ -1,0 +1,14 @@
+[
+   { "name": "Jan", "income": 30, "expenses": 20 },
+   { "name": "Feb", "income": 10, "expenses": 15 },
+   { "name": "Mar", "income": 15, "expenses": 10 },
+   { "name": "Apr", "income": 20, "expenses": 25 },
+   { "name": "May", "income": 10, "expenses": 20 },
+   { "name": "Jun", "income": 25, "expenses": 15 },
+   { "name": "July", "income": 25, "expenses": 15 },
+   { "name": "Aug", "income": 25, "expenses": 15 },
+   { "name": "Sep", "income": 25, "expenses": 15 },
+   { "name": "Oct", "income": 25, "expenses": 15 },
+   { "name": "Nov", "income": 25, "expenses": 15 },
+   { "name": "Dec", "income": 25, "expenses": 15 }
+ ]
