@@ -32,7 +32,6 @@ const select ={
   height:'60px'
 }
   return (
-    <Setting>
       <Box
         height={"100%"}
         ml={"10px"}
@@ -110,7 +109,6 @@ const select ={
           </VStack>
         </Box>
       </Box>
-    </Setting>
   );
 };
 

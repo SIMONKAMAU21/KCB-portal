@@ -75,7 +75,6 @@ const handleCreateRole= () =>{
   };
 
   return (
-    <Setting>
       <Box height="100%" ml="10px" w="99%" bg="white" p="10px">
         <Heading as="h5" size="sm">
           Roles
@@ -131,7 +130,6 @@ const handleCreateRole= () =>{
           </Tbody>
         </Table>
       </Box>
-    </Setting>
   );
 };
 
