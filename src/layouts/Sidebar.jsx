@@ -13,6 +13,7 @@ export const sidebarLinks = [
 
 const Sidebar = () => {
   const location = useLocation();
+console.log('location is', location )
 
   return (
     <Box p="10px" color='#6F7E84' w='100%'>
@@ -25,12 +26,12 @@ const Sidebar = () => {
           <Box
             borderRadius="md"
             w='100%'
-            bg={link.path === location.pathname ? '#002E3A' : 'transparent'}
+            bg={location.pathname.includes(link.path) ? '#002E3A' : 'transparent' }
             p="3"
             _hover={{ bg: '#002E3A' }}
           >
-            <HStack spacing="4" alignItems="center" color={link.path === location.pathname ? 'white' : 'gray.500'}>
-              <Icon as={link.icon} boxSize="6" color={link.path === location.pathname ? 'rgb(130,186,38)' : 'gray.500'} />
+            <HStack spacing="4" alignItems="center" color={location.pathname.includes(link.path) ?  'white' : 'gray.500'}>
+              <Icon as={link.icon} boxSize="6" color={location.pathname.includes(link.path )?  'rgb(130,186,38)' : 'gray.500'} />
               <Text>{link.label}</Text>
             </HStack>
           </Box>

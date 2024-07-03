@@ -14,7 +14,7 @@ navigation('/createpassword')
     <AuthWrapper
       Background='white'
       leftChildren={
-        <Box display='flex' flexDirection='column' gap={{ base: '20rem', md: '', lg: '' }}>
+        <Box display='flex' flexDirection='column' gap={{ base: '20rem', md: 'none', lg: 'none' }}>
           <Text color='#82BA26' fontSize='45px'>Reset password</Text>
           <FaRegCircleCheck size='70px' color='#82BA26' />
         </Box>
@@ -24,7 +24,7 @@ navigation('/createpassword')
           <Image src={email} />
           <Heading as='h4' size='lg' color='#474A4E' textAlign='center' onClick={handleCreate}>Password reset email sent!</Heading>
           <Text color='#5A5A63' fontSize='sm' textAlign='center'>
-            If you do not receive any email from us within 15 <br /> minutes, please check your SPAM folder. If there is still <br /> no email -{' '}
+            If you do not receive any email from us within 15 <br /> minutes, please check your SPAM folder. If there is still <br /> no email-{' '}
             <Link href="/"  textDecoration='underline'>
               click here to resend email
             </Link>

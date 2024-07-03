@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
-  const activeLink = sidebarLinks.find(link => link.path === location.pathname);
+  const activeLink = sidebarLinks.find(link => location.pathname.includes(link.path));
 
   return (
     <HStack w='100%' justifyContent='space-between' p='10px 10px 10px 10px'>
