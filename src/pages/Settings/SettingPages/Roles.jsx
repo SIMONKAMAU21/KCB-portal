@@ -13,8 +13,6 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { EditIcon } from "@chakra-ui/icons";
-import Setting from "../Setting";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Roles = () => {
@@ -59,7 +57,7 @@ const Roles = () => {
 
 const navigate = useNavigate()
 const handleCreateRole= () =>{
-  navigate('/Createrole')
+  navigate('/role/Createrole')
 }
   const toggleStatus = (index) => {
     setRoles((prevRoles) =>

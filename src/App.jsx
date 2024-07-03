@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     { index: true, element: <Generalinfo /> },  
     { path: "roles", element: <Roles /> },
   ]},
-  { path: "/Createrole", element: <CreateRole /> },
+  { path: "/role/Createrole", element: <CreateRole /> },
 ]);
 
 function App() {

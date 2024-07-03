@@ -13,8 +13,8 @@ export const sidebarLinks = [
 
 const Sidebar = () => {
   const location = useLocation();
-console.log('location is', location )
 
+  
   return (
     <Box p="10px" color='#6F7E84' w='100%'>
       {sidebarLinks.map((link, index) => (
@@ -26,7 +26,7 @@ console.log('location is', location )
           <Box
             borderRadius="md"
             w='100%'
-            bg={location.pathname.includes(link.path) ? '#002E3A' : 'transparent' }
+            bg={location.pathname.includes(link.path) ? '#002E3A' : 'none' }
             p="3"
             _hover={{ bg: '#002E3A' }}
           >

@@ -3,7 +3,7 @@ import React from 'react'
 import { RiUserSettingsLine } from "react-icons/ri"
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { FaUserTie } from "react-icons/fa6"
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Stepone = () => {
   const navigation = useNavigate()
