@@ -15,7 +15,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const CreateRole = () => {
   const Roles = [
-    { number: 1, text: "CREATE ROLE", color: "#003A49", path: "/role/CreateRole" },
+    { number: 1, text: "CREATE ROLE", color: "#003A49", path: "/role/Createrole" },
     { number: 2, text: "PERMISSIONS", color: "#E2E2E2", path: "/role/CreateRole" },
   ];
 
@@ -32,7 +32,8 @@ const CreateRole = () => {
           <VStack spacing={4} align="start" mt={5}>
             <FormControl>
               <FormLabel fontSize={"sm"}>Name</FormLabel>
-              <Input w={"60%"} placeholder="Name" />
+              <Input w={"60%"} placeholder="Name"
+              />
             </FormControl>
             <FormControl>
               <FormLabel fontSize={"sm"}>Status</FormLabel>

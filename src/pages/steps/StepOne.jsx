@@ -10,8 +10,8 @@ const StepOne = () => {
     
     leftChildren={
    <Box  > 
-       <Text  fontSize='45px'>Just a few clicks <br /> away from <br /> accessing the <br /> Simba portal </Text>
-      <Text mt='20px' color='#426E79' w='100%'>View recycling statements, interim statements, loan <br />statements, and query records related to your KCB <br />Bank account</Text>
+       <Text  fontSize={{base:"20px",md:"45px"}}>Just a few clicks <br /> away from <br /> accessing the <br /> Simba portal </Text>
+      <Text mt='20px' color='#426E79' w='100%'  fontSize={{base:"12px",md:"none"}}>View recycling statements, interim statements, loan <br />statements, and query records related to your KCB <br />Bank account</Text>
    </Box>
     }
     rightChildren={
