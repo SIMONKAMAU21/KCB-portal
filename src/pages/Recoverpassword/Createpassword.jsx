@@ -27,7 +27,7 @@ const Createpassword = () => {
           {isPasswordChanged ? (
             <Loginform/>
           ) : (
-            <Passwordform onPasswordChange={() => setIsPasswordChanged(true)} />
+            <Passwordform onPasswordChange={() => isPasswordChanged(true)} />
           )}
         </>
       }

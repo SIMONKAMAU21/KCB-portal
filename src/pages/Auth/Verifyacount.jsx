@@ -41,9 +41,9 @@ const Verifyaccount = () => {
       Background='white'
       leftChildren={<Stepsauthentication />}
       rightChildren={
-        <Box>
-          <Heading>Confirm your number</Heading>
-          <Text>Enter the code just sent to your phone</Text>
+        <Box  width={{base:"100%"}} h={'100%'} p={'10px'} >
+          <Heading size={{base:"sm",md:"lg"}} color={"black.100"}>Confirm your number</Heading>
+          <Text fontSize={{base:"10px",md:"18px"}}>Enter the code just sent to your phone</Text>
           <HStack marginTop="20px">
             {code.map((digit, index) => (
               <Input

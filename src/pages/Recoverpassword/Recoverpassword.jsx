@@ -8,8 +8,8 @@ const Recoverpassword = () => {
       <AuthWrapper
          leftChildren={
             <Box>
-               <Text fontSize='45px'>Recover your <br /> password. </Text>
-               <Text mt='20px' color='#426E79' w='100%'> check your e-mail for activation link</Text>
+               <Text fontSize={{base:"20px",md:"45px"}}>Recover your <br /> password. </Text>
+               <Text  color='#426E79' w='100%' fontSize={{base:"10px",md:"25px"}}> check your e-mail for activation link</Text>
             </Box>}
          rightChildren={<>
             <Recoverform />

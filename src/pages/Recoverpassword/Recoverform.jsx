@@ -12,11 +12,12 @@ const Recoverform = () => {
     navigation('/success')
   }
   return (
-    <Box h="100vh" w="80%" display="flex" mt='140px'>
-      <VStack gap='60px'>
+    <Box h="100vh" w={{base:"100%",md:"80%"}} display="flex" mt='140px' >
+      <VStack gap='60px' width=
+      {{base:"100%",md:"50%"}} p={"20px"}>
         <Box w='100%' >
           <Heading fontSize='28px' mb='35px'>Reset Password</Heading>
-          <Text>
+          <Text fontSize={{base:"10px",md:"18px"}}>
             we will send you a password reset link connected to <br /> your existing account
           </Text>
         </Box>
@@ -27,9 +28,9 @@ const Recoverform = () => {
             <Input placeholder='Enter your email' bg='white'/>
           </Box>
           <Box  >
-            <HStack display='flex' justifyContent='space-between' mt='30px' fontSize='20px' >
+            <HStack display='flex' justifyContent='space-between' mt='30px' fontSize={{base:"14px",md:"20px"}} >
               <Text onClick={handleBack} fontWeight='bold' cursor='pointer' color='#CDCDCF'>BACK</Text>
-              <Button color='white' bg='#82BA26' onClick={handlesucces}>RESET PASSWORD</Button>
+              <Button color='white' bg='#82BA26'fontSize={{base:"10px",md:"20px"}} onClick={handlesucces}>RESET PASSWORD</Button>
             </HStack>
           </Box>
         </Box>

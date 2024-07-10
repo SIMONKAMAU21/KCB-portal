@@ -29,10 +29,10 @@ navigation('/verify-account')
           <Box>
             <HStack>
               <Box flex={3} w="100%" bg="#FAFAFA" >
-                <VStack gap="30px" w="40%">
+                <VStack gap="30px" w={{base:"90%",md:"40%"}} p={"10px"}>
                   <Box w="100%" >
-                    <Heading as="h4" size='lg' color='#6A6C70'>Continue with Phone</Heading>
-                    <Text color='rgb(197,198,201)' mt='20px'>We will call or text you to confirm your number. Standard message and rates apply.</Text>
+                    <Heading as="h4" size={{base:"sm",md:"lg"}} color='#6A6C70'>Continue with Phone</Heading>
+                    <Text color='rgb(197,198,201)' mt='20px' fontSize={{base:"10px",md:"18px"}}>We will call or text you to confirm your number. Standard message and rates apply.</Text>
                   </Box>
                   <Box w="100%">
                     <form onSubmit={handleSubmit(onSubmit)}>

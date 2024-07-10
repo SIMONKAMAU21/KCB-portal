@@ -42,32 +42,32 @@ const Loginform = () => {
   };
 
   return (
-    <Box   >
-      <VStack gap="30px" w="40%">
+    <Box   display={{base:"flex"}} justifyContent={{base:"center",md:"flex-start"}} >
+      <VStack gap="30px" w={{base:"90%",md:"40%"}}>
         <Box w="100%">
           <Heading as="h4">Sign in</Heading>
         </Box>
-        <Box w="100%" fontSize='18px'>
+        <Box w="100%" fontSize={{base:"10px",md:"24px"}}>
           <Text>Please sign in to your account to access the partner portal</Text>
         </Box>
         <Box w="100%">
-          <Text fontWeight="500">Your username</Text>
+          <Text fontWeight={{base:"500",md:"500"}} fontSize={{base:"14px",md:"18px"}}>Your username</Text>
           <Input
             placeholder="Enter your email or phone number"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          {usernameError && <Text color="red.500" mt={2}>{usernameError}</Text>}
+          {usernameError && <Text color="red.500" fontSize={"10px"}  mt={2}>{usernameError}</Text>}
         </Box>
         <Box w="100%">
-          <Text fontWeight="500">Password</Text>
+          <Text fontWeight="500" fontSize={{base:"14px",md:"18px"}}>Password</Text>
           <Input
             placeholder="Enter your password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {passwordError && <Text color="red.500" mt={2}>{passwordError}</Text>}
+          {passwordError && <Text color="red.500" fontSize={"10px"} mt={2}>{passwordError}</Text>}
         </Box>
         <Box w="100%">
           <HStack display="flex" justifyContent="space-between">

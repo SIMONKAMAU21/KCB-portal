@@ -15,7 +15,7 @@ const Stepsauthentication = () => {
   const currentStepIndex = steps.findIndex(step => step.path === location.pathname);
 
   return (
-    <Box color='black' gap='30px' fontWeight='700'>
+    <Box color='black' gap='30px' fontWeight={{base:"500",md:'700'}} fontSize={{base:"13px",md:"18px"}}>
     {steps.map((step, index) => (
       <NavLink
         to={step.path}
@@ -28,7 +28,7 @@ const Stepsauthentication = () => {
           ) : step.icon ? (
             step.icon
           ) : (
-            <Box color={step.color} w='60px' h='50px' borderRadius='50%' display='flex' alignItems='center' border={`2px solid ${step.color}`} justifyContent='center'>
+            <Box color={step.color} w={{base:"25px",md:"50px"}} h={{base:"25px",md:"50px"}} borderRadius='50%' display='flex' alignItems='center' border={`2px solid ${step.color}`} justifyContent='center'>
               {step.number}
             </Box>
           )}
