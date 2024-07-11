@@ -12,22 +12,23 @@ const Navbar = () => {
   const activeLink = sidebarLinks.find(link => location.pathname.includes(link.path));
 
   return (
-    <HStack w='100%' justifyContent='space-between' p='10px 10px 10px 10px'>
+    <HStack w='100%' justifyContent='space-between' p='10px'>
       <HStack>
-        <Box>
+        <Box display={{ base: "none", md: "block" }}>
           <CgMenuBoxed size='40px' color='gray' />
         </Box>
-        <Box fontWeight='bold' color='rgb(50,51,61)'>
+        <Box fontWeight='bold' color='rgb(50,51,61)' ml={{ base: "50px", md: "1px" }}>
           {activeLink ? activeLink.label : ''}
         </Box>
       </HStack>
-      <HStack justifyContent='space-around' w='20%'>
-        <Box><LiaSearchSolid size='27px' /></Box>
-        <Box><HiOutlineMail size='27px' /></Box>
-        <Box><IoIosNotificationsOutline size='27px' /></Box>
+
+      <HStack spacing={{ base: 2, md: 4 }} alignItems='center'>
+        <Box display={{ base: "block", md: "block" }}><LiaSearchSolid size='27px' /></Box>
+        <Box display={{ base: "block", md: "block" }}><HiOutlineMail size='27px' /></Box>
+        <Box display={{ base: "block", md: "block" }}><IoIosNotificationsOutline size='27px' /></Box>
         <HStack>
-          <Avatar name='William' bg='rgb(34,31,32)'></Avatar>
-          <Text>William Situma</Text>
+          <Avatar name='William' bg='rgb(34,31,32)' />
+          <Text display={{ base: "none", md: "block" }}>William Situma</Text>
         </HStack>
       </HStack>
     </HStack>

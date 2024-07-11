@@ -1,57 +1,88 @@
-import { Box, HStack, Heading,Text } from '@chakra-ui/react'
-import React from 'react'
-import data from '../../data/data.json'
-import accountData from '../../data/accountData.json'
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,  Line } from 'recharts';
-
+import { Box, HStack, Text } from '@chakra-ui/react';
+import React from 'react';
+import data from '../../data/data.json';
+import accountData from '../../data/accountData.json';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const Overall = () => {
+  const getBarSize = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1200) return 40;
+    if (screenWidth > 768) return 20;
+    return 10;
+  };
+
   return (
-    <Box w='100%'>
-
-      <Box bg='white' w='100%' >
-        <BarChart width={1200} height={250} data={data}  >
-          <CartesianGrid strokeDasharray="2 3" />
-          <YAxis />
-          <Tooltip />
-          <Bar dataKey="income"  fill="#82BA26" />
-          <Bar dataKey="expenses"  fill="#194D5B" />
-        </BarChart>
+    <Box w='100%' p={{ base: 1, md: 4 }}>
+      <Box bg='white' w='100%' p={{ base: 1, md: 4 }} boxShadow='md' borderRadius='md' border={"2px solid red"}>
+        <ResponsiveContainer width="100%" height={350}>
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="income" fill="#82BA26" barSize={getBarSize()} />
+            <Bar dataKey="expenses" fill="#194D5B" barSize={getBarSize()} />
+          </BarChart>
+        </ResponsiveContainer>
       </Box>
-      <Box>
 
-        <HStack justifyContent='space-around' mt='20px' w='100%' gap='20px'>
-          <Box mb={10} bg='white' flex={1}>
-            <Text size="md" p='10px'>Spendings per month</Text>
-            <hr/>
-            <BarChart width={800} height={300} data={data}>
+      <HStack
+        justifyContent='space-around'
+        mt='20px'
+        w='100%'
+        gap='20px'
+        flexDirection={{ base: 'column', md: 'row' }}
+      >
+        <Box
+          mb={10}
+          bg='white'
+          flex={1}
+          p={{ base: 2, md: 4 }}
+          boxShadow='md'
+          borderRadius='md'
+          width={{ base: '100%', md: '50%' }}
+        >
+          <Text size="md" p='10px'>Spendings per month</Text>
+          <hr />
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
               <YAxis />
               <Tooltip />
               <Legend />
-              <Bar  dataKey="expenses" fill="#82BA26" />
-              {/* <Line type="monotone" dataKey="expenses" stroke="#8884d8" /> */}
+              <Bar dataKey="expenses" fill="#82BA26" barSize={getBarSize()} />
             </BarChart>
-          </Box>
-          <Box mb={10} bg='white' flex={1}>
-            <Text size="md"  p='10px'>Account spendings</Text>
-            <hr/>
-            <BarChart width={600} height={300} data={accountData} layout='vertical'>
+          </ResponsiveContainer>
+        </Box>
+
+        <Box
+          mb={10}
+          bg='white'
+          flex={1}
+          p={{ base: 2, md: 4 }}
+          boxShadow='md'
+          borderRadius='md'
+          width={{ base: '100%', md: '50%' }}
+        >
+          <Text size="md" p='10px'>Account spendings</Text>
+          <hr />
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={accountData} layout='vertical'>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis type='number' />
-              <YAxis type='category'  dataKey='name'/>
+              <YAxis type='category' dataKey='name' />
               <Tooltip />
               <Legend />
-        
-              <Bar dataKey="amount"  fill="#8884d8" />
+              <Bar dataKey="amount" fill="#8884d8" barSize={getBarSize()} />
             </BarChart>
-          </Box>
-        </HStack>
-      </Box>
+          </ResponsiveContainer>
+        </Box>
+      </HStack>
     </Box>
-
-  )
+  );
 }
 
-export default Overall
+export default Overall;
