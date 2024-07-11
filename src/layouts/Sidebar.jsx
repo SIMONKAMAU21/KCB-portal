@@ -4,9 +4,7 @@ import {
   Box,
   HStack,
   Icon,
-  IconButton,
   Text,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import {
   MdDashboard,
@@ -15,7 +13,6 @@ import {
   MdReceipt,
   MdSettings,
 } from "react-icons/md";
-import { useState } from "react";
 
 export const sidebarLinks = [
   { path: "/dashboard", label: "Dashboard", icon: MdDashboard },

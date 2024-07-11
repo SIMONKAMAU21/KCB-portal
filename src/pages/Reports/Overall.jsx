@@ -14,9 +14,9 @@ const Overall = () => {
 
   return (
     <Box w='100%' p={{ base: 1, md: 4 }}>
-      <Box bg='white' w='100%' p={{ base: 1, md: 4 }} boxShadow='md' borderRadius='md' border={"2px solid red"}>
+      <Box bg='white' w='100%' p={{ base: 2, md: 4 }} boxShadow='md' borderRadius='md' >
         <ResponsiveContainer width="100%" height={350}>
-          <BarChart data={data}>
+          <BarChart data={data} width={"100%"}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
