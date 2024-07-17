@@ -11,6 +11,7 @@ import {
   Td,
   Switch,
   IconButton,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import { EditIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
@@ -71,16 +72,18 @@ const handleCreateRole= () =>{
       )
     );
   };
+  const formWidth = useBreakpointValue({ base: "100%", md: "100%" });
 
   return (
-      <Box height="100%" ml="10px" w="99%" bg="white" p="10px">
+      <Box height="100%" ml="10px"       w={{base:"100%",md:"88%" }}
+      bg="white" border={"2px solid green"} p="10px">
         <Heading as="h5" size="sm">
           Roles
         </Heading>
         <Button mt="40px" bg="#003A49" color="white" w="15%" onClick={handleCreateRole}>
           Create Role
         </Button>
-        <Table variant="simple" mt="20px">
+        <Table variant="simple" mt="20px" >
           <Thead>
             <Tr>
               <Th>User Group</Th>

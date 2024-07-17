@@ -16,7 +16,7 @@ const Setting = () => {
           <Outlet />
         </Box>
         
-        <Box flex={{ base: 1, md: 2 }} border={"2px solid red"}>
+        <Box  border={"2px solid teal"}>
           <Leftsidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Box>
       </HStack>

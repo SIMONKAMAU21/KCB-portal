@@ -14,7 +14,7 @@ const SettingLinks = [
 
 const Leftsidebar = ({ isOpen, setIsOpen }) => {
   const displayMode = useBreakpointValue({ base: "none", md: "block" });
-  const sidebarWidth = useBreakpointValue({ base: "60%", md: "20%" });
+  const sidebarWidth = useBreakpointValue({ base: "60%", md: "10%" });
   const location = useLocation();
   const navigationStyles = {
     top: 0,
@@ -23,6 +23,7 @@ const Leftsidebar = ({ isOpen, setIsOpen }) => {
     width: sidebarWidth,
     padding: "10px",
     zIndex: 500,
+    mt:"60px",
     display: displayMode,
   };
 

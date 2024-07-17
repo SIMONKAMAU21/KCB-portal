@@ -37,9 +37,7 @@ const Generalinfo = () => {
   return (
     <Box
       height={"100%"}
-      ml={"10px"}
-      w={"100%"}
-      border={"2px solid red"}
+      w={{base:"100%",md:"88%" }}
       background={"white"}
       p={"10px"}
     >
@@ -72,7 +70,11 @@ const Generalinfo = () => {
             <VStack flex={2} minW="250px">
               <FormControl id="email">
                 <FormLabel color={color.color}>Email</FormLabel>
-                <Input type="email" placeholder="Enter your email" h={select.height} />
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  h={select.height}
+                />
               </FormControl>
 
               <FormControl id="language" h={"150px"}>
@@ -90,7 +92,11 @@ const Generalinfo = () => {
             <VStack flex={2} minW="250px">
               <FormControl id="phone">
                 <FormLabel color={color.color}>Phone</FormLabel>
-                <Input type="tel" placeholder="Enter phone number" h={select.height} />
+                <Input
+                  type="tel"
+                  placeholder="Enter phone number"
+                  h={select.height}
+                />
               </FormControl>
               <FormControl id="createdBy" h={"150px"}>
                 <FormLabel color={color.color} fontSize={"small"}>
