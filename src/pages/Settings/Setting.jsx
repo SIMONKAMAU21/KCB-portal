@@ -7,28 +7,28 @@ import Leftsidebar from "./SettingSideBar/Settingnavigation";
 
 const Setting = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const displayMode = useBreakpointValue({ base: "none", md: "block" });
+  const displayMode = useBreakpointValue({ base: "block", md: "none" });
 
   return (
     <PageWrapper>
       <HStack w="full" align="stretch">
-        <Box flex={{ base: 1, md: 8 }} h="100vh" p={{ base: 1, md: 8 }}>
+        <Box flex={{ base: 2, md: 8 }} w={{base:"100%"}}  h="100vh" p={{ base: 1, md: 8 }}>
           <Outlet />
         </Box>
         
-        <Box  border={"2px solid teal"}>
+        <Box >
           <Leftsidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         </Box>
       </HStack>
 
       <IconButton
         icon={isOpen ? <CloseIcon boxSize="20px" /> : <HamburgerIcon boxSize="20px" />}
-        display={{ base: "block", md: "none" }}
+        display={displayMode}
         position="fixed"
-        top="20px"
-        right="10px"
-        color="black"
-        bg="#82BA26"
+        top="80px"
+        right="20px"
+        color="#82BA26"
+        bg="gray.300"
         w="30px"
         h="30px"
         onClick={() => setIsOpen(!isOpen)}

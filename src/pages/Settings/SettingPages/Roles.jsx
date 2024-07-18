@@ -11,7 +11,8 @@ import {
   Td,
   Switch,
   IconButton,
-  useBreakpointValue
+  useBreakpointValue,
+  Stack,
 } from "@chakra-ui/react";
 import { EditIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
@@ -56,10 +57,11 @@ const Roles = () => {
     },
   ]);
 
-const navigate = useNavigate()
-const handleCreateRole= () =>{
-  navigate('/role/Createrole')
-}
+  const navigate = useNavigate();
+  const handleCreateRole = () => {
+    navigate("/role/Createrole");
+  };
+
   const toggleStatus = (index) => {
     setRoles((prevRoles) =>
       prevRoles.map((role, i) =>
@@ -72,65 +74,84 @@ const handleCreateRole= () =>{
       )
     );
   };
-  const formWidth = useBreakpointValue({ base: "100%", md: "100%" });
+
+  const buttonWidth = useBreakpointValue({ base: "50%", md: "20%" });
 
   return (
-      <Box height="100%" ml="10px"       w={{base:"100%",md:"88%" }}
-      bg="white" border={"2px solid green"} p="10px">
-        <Heading as="h5" size="sm">
-          Roles
-        </Heading>
-        <Button mt="40px" bg="#003A49" color="white" w="15%" onClick={handleCreateRole}>
-          Create Role
-        </Button>
-        <Table variant="simple" mt="20px" >
-          <Thead>
-            <Tr>
-              <Th>User Group</Th>
-              <Th>Status</Th>
-              <Th>Created</Th>
-              <Th>Modified</Th>
-              <Th>Actions</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            {roles.map((role, index) => (
-              <Tr key={index}>
-                <Td>{role.name}</Td>
-                <Td>
-                  <Box
-                    h="40px"
-                    w="140px"
-                    borderRadius="15px"
-                    backgroundColor={role.status === "Active" ? "#82BA26" : "#ccc"}
-                    alignItems="center"
-                    display="flex"
-                    color={role.status === "Active" ? "white" : "red.500"}
-                    justifyContent="space-around"
-                  >
-                    <Switch
-                      isChecked={role.status === "Active"}
-                      onChange={() => toggleStatus(index)}
-                      colorScheme="#82BA26"
-                    />
-                    {role.status.toLowerCase()}
-                  </Box>
-                </Td>
-                <Td>{role.created}</Td>
-                <Td>{role.modified}</Td>
-                <Td color="#82BA26">
-                  Permissions
-                  <IconButton
-                    aria-label="Edit Role"
-                    icon={<EditIcon />}
-                    size="sm"
+    <Box
+      height="100%"
+      ml={{ base: "0", md: "10px" }}
+      w={{ base: "100%", md: "88%" }}
+      flex={2}
+      p="10px"
+      fontSize={{base:"10px",md:"18px"}}
+    >
+      <Heading as="h5" size="sm" mb={{ base: "20px", md: "40px" }}>
+        Roles
+      </Heading>
+      <Button
+        bg="#003A49"
+        color="white"
+        w={buttonWidth}
+        onClick={handleCreateRole}
+        mb={{ base: "20px", md: "0" }}
+      >
+        Create Role
+      </Button>
+
+     <Box  w={{base:"100%"}}  overflow={"scroll"}>
+     <Table  variant="simple" mt="20px"  size={{base:"md"}}>
+        <Thead >
+          <Tr>
+            <Th>User Group</Th>
+            <Th>Status</Th>
+            <Th>Created</Th>
+            <Th>Modified</Th>
+            <Th>Actions</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {roles.map((role, index) => (
+            <Tr key={index}>
+              <Td>{role.name}</Td>
+              <Td>
+                <Box
+                  h={{base:"30px"}}
+                  w={{base:"100px",md:""}}
+                  borderRadius="15px"
+                  backgroundColor={
+                    role.status === "Active" ? "#82BA26" : "#ccc"
+                  }
+                  display="flex"
+                  alignItems="center"
+                  color={role.status === "Active" ? "white" : "red.500"}
+                  justifyContent="space-around"
+                >
+                  <Switch
+                    isChecked={role.status === "Active"}
+                    onChange={() => toggleStatus(index)}
+                    colorScheme="green"
                   />
-                </Td>
-              </Tr>
-            ))}
-          </Tbody>
-        </Table>
-      </Box>
+                  {role.status.toLowerCase()}
+                </Box>
+              </Td>
+              <Td>{role.created}</Td>
+              <Td>{role.modified}</Td>
+              <Td color="#82BA26">
+                Permissions
+                <IconButton
+                  aria-label="Edit Role"
+                  icon={<EditIcon />}
+                  size="sm"
+                  ml={2}
+                />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+     </Box>
+    </Box>
   );
 };
 

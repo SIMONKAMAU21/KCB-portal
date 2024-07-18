@@ -28,7 +28,7 @@ const Generalinfo = () => {
     color: "black.500",
   };
   const select = {
-    height: "60px",
+    height: "40px",
   };
 
   const formWidth = useBreakpointValue({ base: "100%", md: "70%" });
@@ -56,9 +56,10 @@ const Generalinfo = () => {
       </HStack>
 
       <Box p={2} borderRadius="lg" w={formWidth}>
+
         <VStack spacing={2}>
           <FormControl id="username">
-            <FormLabel color={color.color}>Username</FormLabel>
+            <FormLabel color={color.color}fontSize={{base:"small",md:"md"}}>Username</FormLabel>
             <Input
               placeholder="Username"
               value={name}
@@ -66,10 +67,10 @@ const Generalinfo = () => {
               height={select.height}
             />
           </FormControl>
-          <HStack w={"100%"} flexWrap="wrap" spacing={4}>
+          <HStack w={"100%"} flexWrap="wrap" spacing={{base:"0",md:"2"}}  >
             <VStack flex={2} minW="250px">
               <FormControl id="email">
-                <FormLabel color={color.color}>Email</FormLabel>
+                <FormLabel color={color.color} fontSize={{base:"small",md:"md"}}>Email</FormLabel>
                 <Input
                   type="email"
                   placeholder="Enter your email"
@@ -78,8 +79,8 @@ const Generalinfo = () => {
               </FormControl>
 
               <FormControl id="language" h={"150px"}>
-                <FormLabel color={color.color}>Language</FormLabel>
-                <Select defaultValue="English" h={"60px"}>
+                <FormLabel color={color.color} fontSize={{base:"small",md:"md"}}>Language</FormLabel>
+                <Select defaultValue="English"  h={{base:"40px",md:"60px"}}>
                   {languages.map((language, index) => (
                     <option key={index} value={language}>
                       {language}
@@ -91,7 +92,7 @@ const Generalinfo = () => {
             <Spacer display={{ base: "none", md: "block" }} />
             <VStack flex={2} minW="250px">
               <FormControl id="phone">
-                <FormLabel color={color.color}>Phone</FormLabel>
+                <FormLabel color={color.color} fontSize={{base:"small",md:"md"}}>Phone</FormLabel>
                 <Input
                   type="tel"
                   placeholder="Enter phone number"
@@ -99,7 +100,7 @@ const Generalinfo = () => {
                 />
               </FormControl>
               <FormControl id="createdBy" h={"150px"}>
-                <FormLabel color={color.color} fontSize={"small"}>
+                <FormLabel color={color.color} fontSize={{base:"small",md:"md"}}>
                   Created by
                 </FormLabel>
                 <Select defaultValue="System" isReadOnly h={select.height}>
@@ -113,7 +114,7 @@ const Generalinfo = () => {
             </VStack>
           </HStack>
 
-          <HStack w={"100%"} flexWrap="wrap" spacing={4}>
+          <HStack w={"100%"} flexWrap="wrap" spacing={4}  >
             <Button backgroundColor="#82BA26" color={"white"}>
               Update Settings
             </Button>
