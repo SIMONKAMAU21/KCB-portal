@@ -15,34 +15,55 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const CreateRole = () => {
   const Roles = [
-    { number: 1, text: "CREATE ROLE", color: "#003A49", path: "/role/Createrole" },
-    { number: 2, text: "PERMISSIONS", color: "#E2E2E2", path: "/role/CreateRole" },
+    {
+      number: 1,
+      text: "CREATE ROLE",
+      color: "#003A49",
+      path: "/role/Createrole",
+    },
+    {
+      number: 2,
+      text: "PERMISSIONS",
+      color: "#E2E2E2",
+      path: "/role/CreateRole",
+    },
   ];
 
   const location = useLocation();
-  const currentRoleIndex = Roles.findIndex((role) => location.pathname.includes(role.path));
+  const currentRoleIndex = Roles.findIndex((role) =>
+    location.pathname.includes(role.path)
+  );
 
   return (
     <AuthWrapper
       Background={"white"}
       rightChildren={
-        <Box w={"50%"}>
+        <Box w={{ base: "100%", md: "50%" }} p={3}>
           <Text fontSize={"3xl"}>Add role</Text>
-          <Text mt={8}>Enter name for the role you wish to create and assign it a status.</Text>
+          <Text mt={8} fontSize={{ base: "13px", md: "18px" }}>
+            Enter name for the role you wish to create and assign it a status.
+          </Text>
           <VStack spacing={4} align="start" mt={5}>
-            <FormControl>
+            <FormControl w={{ base: "100%" }}>
               <FormLabel fontSize={"sm"}>Name</FormLabel>
-              <Input w={"60%"} placeholder="Name"
-              />
+              <Input w={{ base: "100%", md: "60%" }} placeholder="Name" />
             </FormControl>
             <FormControl>
               <FormLabel fontSize={"sm"}>Status</FormLabel>
-              <Select w={"60%"} placeholder="Select status">
+              <Select
+                w={{ base: "100%", md: "60%" }}
+                placeholder="Select status"
+              >
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
               </Select>
             </FormControl>
-            <Button w={"150px"} rightIcon={<ArrowForwardIcon />} backgroundColor={"#003A49"} color={"white"}>
+            <Button
+              w={"150px"}
+              rightIcon={<ArrowForwardIcon />}
+              backgroundColor={"#003A49"}
+              color={"white"}
+            >
               Next
             </Button>
           </VStack>
@@ -66,7 +87,12 @@ const CreateRole = () => {
                 >
                   {role.number}
                 </Box>
-                <Text color={currentRoleIndex === role.number - 1 ? "#003A49" : "#E2E2E2"}  fontSize={"25px"}>
+                <Text
+                  color={
+                    currentRoleIndex === role.number - 1 ? "#003A49" : "#E2E2E2"
+                  }
+                  fontSize={{ base: "14px",md:"25px" }}
+                >
                   {role.text}
                 </Text>
               </Box>

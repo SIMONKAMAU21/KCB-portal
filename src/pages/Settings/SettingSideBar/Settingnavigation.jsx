@@ -41,6 +41,7 @@ const Leftsidebar = ({ isOpen, setIsOpen }) => {
       background="white"
       boxShadow="md"
       borderRadius="md"
+      fontSize={{base:"11px",md:"18px"}}
     >
       {SettingLinks.map((link, index) => (
         <NavLink
