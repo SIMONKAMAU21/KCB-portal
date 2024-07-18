@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import ErrorBoundary from './components/Errorboundary';
+import Cards from './pages/Settings/SettingPages/Cards';
 
 // Lazy-loaded components
 const StepOne = lazy(() => import('./pages/steps/StepOne'));
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
   { path: "/settings", element: <Setting />, children: [
     { index: true, element: <Generalinfo /> },  
     { path: "roles", element: <Roles /> },
+    { path: "cards", element:<Cards/> },
   ]},
   { path: "/role/Createrole", element: <CreateRole /> },
 ]);
