@@ -9,18 +9,22 @@ import {
 const Securitycard = ({ icon, heading, text, width }) => {
   return (
     <Box
-      h={"240px"}
+      h={{base:"240px",md:"340px"}}
       gap={"10px"}
       p={{ base: "5px", md: "10px" }}
       alignItems={"center"}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
-      boxShadow={"lg"}
       bg={"white"}
+      border={"2px solid"}
+      borderRadius={"lg"}
       w={width}
       _hover={{
-        width:"60%"
+        height:"350px",
+        boxShadow:"2xl",
+        border:"none"
+
       }}
     >
       <Box>{icon}</Box>

@@ -14,8 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { AddIcon, EmailIcon, LockIcon } from "@chakra-ui/icons";
 import Securitycard from "../../../components/Securitycard";
-import { GiSecurityGate } from "react-icons/gi";
-import { color } from "framer-motion";
 
 const Security = () => {
   const inputHeight = "60px";
