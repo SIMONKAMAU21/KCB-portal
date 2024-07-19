@@ -133,10 +133,10 @@ const Security = () => {
           />
         </HStack>
         <HStack mt={"30px"}>
-          <Button bg={"#82BA27"} p={"30px"} color={"white"}>
+          <Button bg={"#82BA27"}p={{base:"20px",md:"30px"}} color={"white"}>
             UPDATE SETTINGS
           </Button>
-          <Button p={"30px"}>CANCEL</Button>
+          <Button p={{base:"20px",md:"30px"}}>CANCEL</Button>
         </HStack>
       </Box>
     </Box>

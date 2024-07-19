@@ -17,11 +17,11 @@ const Securitycard = ({ icon, heading, text, width }) => {
       flexDirection={"column"}
       justifyContent={"center"}
       bg={"white"}
-      border={"2px solid"}
+      border={"2px solid gray"}
       borderRadius={"lg"}
       w={width}
       _hover={{
-        height:"350px",
+        // height:"350px",
         boxShadow:"2xl",
         border:"none"
 
