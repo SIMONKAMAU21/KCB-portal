@@ -5,6 +5,7 @@ import ErrorBoundary from './components/Errorboundary';
 import Cards from './pages/Settings/SettingPages/Cards';
 import Security from './pages/Settings/SettingPages/Security';
 import Sessions from './pages/Settings/SettingPages/Sessions';
+import Inbox from './pages/Settings/SettingPages/Inbox';
 
 // Lazy-loaded components
 const StepOne = lazy(() => import('./pages/steps/StepOne'));
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
     { path: "cards", element:<Cards/> },
     { path: "security", element:<Security/>},
     { path: "sessions", element:<Sessions/>},
+    { path: "inbox", element:<Inbox/>},
   ]},
   { path: "/role/Createrole", element: <CreateRole /> },
 ]);

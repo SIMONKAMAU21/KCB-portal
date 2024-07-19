@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "sender": "David Kariuki",
+      "avatar": "https://bit.ly/dan-abramov",
+      "date": "Jan 5",
+      "tag": "Support",
+      "snippet": "Lorem ipsum dolor sit amet Consectetur...",
+      "body": "Hi David, \n\nIste minus et. Non necessitatibus ut est..."
+
+    },
+    {
+      "id": 2,
+      "sender": "Llyod Masika",
+      "avatar": "https://bit.ly/sage-adebayo",
+      "date": "Jan 5",
+      "snippet": "Lorem ipsum dolor sit amet Consectetur...",
+      "body": "Hi David, \n\nIste minus et. Non necessitatibus ut est..."
+
+    },
+    {
+      "id": 3,
+      "sender": "Cecile Mbarire",
+      "avatar": "https://bit.ly/prosper-baba",
+      "date": "Jan 5",
+      "snippet": "Lorem ipsum dolor sit amet Consectetur...",
+      "body": "Hi David, \n\nIste minus et. Non necessitatibus ut est..."
+
+    },
+    {
+      "id": 4,
+      "sender": "Dennis Oluoch",
+      "avatar": "https://bit.ly/code-beast",
+      "date": "Jan 5",
+      "snippet": "Lorem ipsum dolor sit amet Consectetur..."
+    },
+    {
+      "id": 5,
+      "sender": "David Kariuki",
+      "avatar": "https://bit.ly/dan-abramov",
+      "date": "Jan 5",
+      "snippet": "Lorem ipsum dolor sit amet Consectetur..."
+    }
+  ]
+  
