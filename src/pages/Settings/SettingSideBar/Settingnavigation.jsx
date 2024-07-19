@@ -5,7 +5,7 @@ import { Box, HStack, Text, useBreakpointValue } from "@chakra-ui/react";
 const SettingLinks = [
   { path: "", label: "General information" },
   { path: "roles", label: "Roles" },
-  { path: "reports", label: "Security" },
+  { path: "security", label: "Security" },
   { path: "cards", label: "Cards" },
   { path: "float-limits", label: "Float Limits" },
   { path: "inbox", label: "Inbox" },

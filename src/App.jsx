@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 import ErrorBoundary from './components/Errorboundary';
 import Cards from './pages/Settings/SettingPages/Cards';
+import Security from './pages/Settings/SettingPages/Security';
 
 // Lazy-loaded components
 const StepOne = lazy(() => import('./pages/steps/StepOne'));
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
     { index: true, element: <Generalinfo /> },  
     { path: "roles", element: <Roles /> },
     { path: "cards", element:<Cards/> },
+    { path: "security", element:<Security/>},
   ]},
   { path: "/role/Createrole", element: <CreateRole /> },
 ]);
