@@ -24,7 +24,7 @@ const Setting = () => {
       <IconButton
         icon={isOpen ? <CloseIcon boxSize="20px" /> : <HamburgerIcon boxSize="20px" />}
         display={displayMode}
-        position="fixed"
+        position="absolute"
         top="80px"
         right="20px"
         color="#82BA26"

@@ -31,7 +31,7 @@ const PageWrapper = ({ rightChildren, Background, children }) => {
       <IconButton
         icon={isOpen ? <CloseIcon boxSize="20px" /> : <HamburgerIcon boxSize="20px" />}
         display={{ base: "block", md: "none" }}
-        position="fixed"
+        position="absolute"
         top="20px"
         color="black"
         bg="#82BA26"
