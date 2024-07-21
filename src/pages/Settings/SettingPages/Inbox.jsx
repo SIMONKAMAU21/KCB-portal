@@ -42,7 +42,7 @@ const Inbox = () => {
   const isLargerScreen = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Box display="flex" h="100vh" w="100%">
+    <Box display="flex" h="100vh" w="100%"bg={"white"} width={"88%"} >
       {/* Sidebar */}
       <VStack
         w={{ base: "25%", md: "20%" }}

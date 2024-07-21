@@ -20,6 +20,8 @@ const Sessions = () => {
       w={{ base: "100%", md: "87%" }}
       fontSize={{ base: "11px", md: "19px" }}
       h={"100%"}
+      bg={"white"}
+      p={{base:"5px",md:"10px"}}
     >
       <Heading size={{ base: "sm" ,md:"lg"}}>Last Sessions</Heading>
       <TableContainer mt={"30px"}>

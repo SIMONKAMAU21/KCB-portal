@@ -26,6 +26,7 @@ const Security = () => {
       w={{ base: "100%", md: "89%" }}
       gap="20px"
       p={{ base: "10px", md: "none" }}
+      bg={"white"}
     >
       <Heading as="h5" size="sm" mb={{ base: "20px", md: "40px" }}>
         Security

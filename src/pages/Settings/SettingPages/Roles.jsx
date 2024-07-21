@@ -85,6 +85,7 @@ const Roles = () => {
       flex={2}
       p="10px"
       fontSize={{base:"10px",md:"18px"}}
+      bg={"white"}
     >
       <Heading as="h5" size="sm" mb={{ base: "20px", md: "40px" }}>
         Roles

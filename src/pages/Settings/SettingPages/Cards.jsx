@@ -27,7 +27,9 @@ const Cards = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Box width={{base:"100%",md:"85%"}}  p={4} h="100%">
+    <Box width={{base:"100%",md:"85%"}}  p={4} h="100%"
+    bg={"white"}
+    >
       <Heading as="h5" size="sm" mb={4}>
         Payment Methods
       </Heading>

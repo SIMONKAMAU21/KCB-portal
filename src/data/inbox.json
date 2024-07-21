@@ -32,14 +32,19 @@
       "sender": "Dennis Oluoch",
       "avatar": "https://bit.ly/code-beast",
       "date": "Jan 5",
-      "snippet": "Lorem ipsum dolor sit amet Consectetur..."
+      "snippet": "Lorem ipsum dolor sit amet Consectetur...",
+      "body":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, voluptate. Dolore veniam harum dolor commodi impedit eos dicta ea animi aliquid reprehenderit. Maxime ducimus libero, est beatae unde eligendi! Provident earum doloribus deleniti adipisci velit, ipsa autem explicabo. Excepturi pariatur facere maxime incidunt cum voluptatum deleniti vero, mollitia, itaque iusto, omnis nisi exercitationem reiciendis eaque esse? At blanditiis obcaecati reiciendis totam quas quos, veniam tenetur ea id, modi magnam. Aspernatur, doloremque sequi animi adipisci dolore at officia maiores praesentium tenetur!"
+ 
+
     },
     {
       "id": 5,
       "sender": "David Kariuki",
       "avatar": "https://bit.ly/dan-abramov",
       "date": "Jan 5",
-      "snippet": "Lorem ipsum dolor sit amet Consectetur..."
+      "snippet": "Lorem ipsum dolor sit amet Consectetur...",
+      "body":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, voluptate. Dolore veniam harum dolor commodi impedit eos dicta ea animi aliquid reprehenderit. Maxime ducimus libero, est beatae unde eligendi! Provident earum doloribus deleniti adipisci velit, ipsa autem explicabo. Excepturi pariatur facere maxime incidunt cum voluptatum deleniti vero, mollitia, itaque iusto, omnis nisi exercitationem reiciendis eaque esse? At blanditiis obcaecati reiciendis totam quas quos, veniam tenetur ea id, modi magnam. Aspernatur, doloremque sequi animi adipisci dolore at officia maiores praesentium tenetur!"
+
     }
   ]
   
