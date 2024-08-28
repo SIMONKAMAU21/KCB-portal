@@ -12,8 +12,10 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { NavLink, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CreateRole = () => {
+  const navigate =  useNavigate()
   const Roles = [
     {
       number: 1,
@@ -25,7 +27,7 @@ const CreateRole = () => {
       number: 2,
       text: "PERMISSIONS",
       color: "#E2E2E2",
-      path: "/role/CreateRole",
+      path: "/role/Permisssion",
     },
   ];
 
@@ -33,7 +35,9 @@ const CreateRole = () => {
   const currentRoleIndex = Roles.findIndex((role) =>
     location.pathname.includes(role.path)
   );
-
+const permission = () =>{
+  navigate("/role/Permission")
+}
   return (
     <AuthWrapper
       Background={"white"}
@@ -63,6 +67,7 @@ const CreateRole = () => {
               rightIcon={<ArrowForwardIcon />}
               backgroundColor={"#003A49"}
               color={"white"}
+              onClick={permission}
             >
               Next
             </Button>

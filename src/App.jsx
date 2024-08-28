@@ -6,6 +6,7 @@ import Cards from './pages/Settings/SettingPages/Cards';
 import Security from './pages/Settings/SettingPages/Security';
 import Sessions from './pages/Settings/SettingPages/Sessions';
 import Inbox from './pages/Settings/SettingPages/Inbox';
+import Permission from './pages/Settings/Permission';
 
 // Lazy-loaded components
 const StepOne = lazy(() => import('./pages/steps/StepOne'));
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
     { path: "inbox", element:<Inbox/>},
   ]},
   { path: "/role/Createrole", element: <CreateRole /> },
+  { path: "/role/Permission", element: <Permission/>},
 ]);
 
 function App() {
